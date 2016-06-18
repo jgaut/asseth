@@ -38,7 +38,7 @@ contract MyContract {
     }
   
     function move() role1Only newContractExist{
-        myContract.setRole1.value(0).gas(0/*a définir*/)(role1);
+        myContract.setRole1.value(0).gas(tx.gasprice*5416)(role1);
         myContract.send(this.balance);
         role1=0;
         oldContract=0;
