@@ -44,7 +44,7 @@ contract MyContract {
     	/*Il faut tester ici s'il y a assez de gas pour réaliser le migration*/
     	/*TODO*/
         /*Migration du role1 vers le nouveau contrat*/
-        /*le chiffre 5416 est le nombre de gas nécessaire pour l'exacution de la fonction setRole1*/
+        /*le chiffre 5416 est le nombre de gas nécessaire pour l'exécution de la fonction setRole1*/
         myContract.setRole1.value(0).gas(tx.gasprice*5416)(role1);
         /*Envoie du solde du contrat vers le contrat cible*/
         myContract.send(this.balance);
